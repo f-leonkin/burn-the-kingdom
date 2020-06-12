@@ -1,0 +1,257 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Dragon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/font/PermanentMarker-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Pause.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Loading.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/pause-button.png" type="Texture" id=6]
+[ext_resource path="res://assets/sound-button.png" type="Texture" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 30, 1, 50 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.239216, 0.2, 0.858824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.176471, 0.176471, 0.176471, 0.823529 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.384314, 0, 0.847059, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="DynamicFont" id=17]
+size = 18
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Player" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 55, -12 )
+
+[node name="Dragon" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 12 )
+
+[node name="UI" type="Control" parent="."]
+margin_left = 3.70123
+margin_right = 435.701
+margin_bottom = 768.0
+rect_min_size = Vector2( 432, 768 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerLabel" type="Label" parent="UI"]
+margin_left = 10.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Power:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPLabel" type="Label" parent="UI"]
+margin_left = 10.0
+margin_top = 40.0
+margin_right = 210.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 200, 50 )
+custom_fonts/font = SubResource( 2 )
+text = "HP: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SuperAttackProgressBar" type="ProgressBar" parent="UI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -67.9999
+margin_right = 100.0
+margin_bottom = -37.9999
+rect_min_size = Vector2( 200, 30 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+step = 1.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SuperAttackButton" type="Button" parent="UI/SuperAttackProgressBar"]
+visible = false
+margin_left = -10.0
+margin_top = -5.0
+margin_right = 210.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 220, 40 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "SUPER ATTACK"
+
+[node name="PauseButton" type="Button" parent="UI"]
+margin_left = 370.0
+margin_top = 10.0
+margin_right = 482.0
+margin_bottom = 116.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundButton" type="Button" parent="UI"]
+margin_left = 310.0
+margin_top = 10.0
+margin_right = 410.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" parent="." instance=ExtResource( 4 )]
+visible = false
+color = Color( 0, 0, 0, 0.784314 )
+
+[node name="PauseButton" type="Button" parent="Pause"]
+margin_left = 370.0
+margin_top = 10.0
+margin_right = 482.0
+margin_bottom = 116.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundButton" type="Button" parent="Pause"]
+margin_left = 310.0
+margin_top = 10.0
+margin_right = 410.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Finale" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 432, 768 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Finale"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -200.0
+margin_right = 150.0
+margin_bottom = 200.0
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Finale/ColorRect"]
+margin_right = 300.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 17 )
+text = "Good job, mighty dragon!
+The kingdom is burning!
+All treasures are now yours!
+
+
+
+THANKS FOR PLAYING!
+
+Press ESC to exit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="UI/SuperAttackProgressBar/SuperAttackButton" to="Dragon" method="_on_SuperAttackButton_pressed"]
+[connection signal="pressed" from="UI/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_SoundButton_pressed"]
+[connection signal="pressed" from="Pause/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="Pause/SoundButton" to="." method="_on_SoundButton_pressed"]

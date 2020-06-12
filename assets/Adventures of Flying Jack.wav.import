@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Adventures of Flying Jack.wav-a6038f5f04dd4506a608457f8a1b8a62.sample"
+
+[deps]
+
+source_file="res://assets/Adventures of Flying Jack.wav"
+dest_files=[ "res://.import/Adventures of Flying Jack.wav-a6038f5f04dd4506a608457f8a1b8a62.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

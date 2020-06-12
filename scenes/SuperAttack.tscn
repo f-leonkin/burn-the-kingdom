@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/glb/Dragon/fire.material" type="Material" id=1]
+[ext_resource path="res://scripts/Fire.gd" type="Script" id=2]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( 0, 0, 0, -12, 0, 21, 12, 0, 21, 0, 0, 25, 0, -20, 0, -12, -20, 21, 12, -20, 21, 0, -20, 25 )
+
+[sub_resource type="ArrayMesh" id=2]
+resource_name = "Plane"
+surfaces/0 = {
+"aabb": AABB( -4.07294, 0, 0, 8.14587, 1e-05, 8.14587 ),
+"array_data": PoolByteArray( 125, 85, 130, 192, 0, 0, 0, 0, 125, 85, 226, 64, 0, 126, 0, 0, 130, 0, 0, 127, 244, 59, 86, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 126, 0, 0, 130, 0, 0, 127, 233, 55, 1, 60, 199, 116, 16, 192, 0, 0, 0, 0, 207, 210, 250, 64, 0, 126, 0, 0, 130, 0, 0, 127, 45, 58, 82, 41, 201, 116, 16, 64, 0, 0, 0, 0, 207, 210, 250, 64, 0, 127, 0, 0, 130, 0, 0, 127, 2, 51, 61, 41, 199, 116, 16, 192, 0, 0, 0, 0, 207, 210, 250, 64, 0, 127, 0, 0, 130, 0, 0, 127, 45, 58, 82, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 0, 0, 130, 0, 0, 127, 233, 55, 1, 60, 236, 81, 184, 52, 0, 0, 0, 0, 125, 85, 2, 65, 0, 127, 0, 0, 130, 0, 0, 127, 237, 55, 83, 27, 199, 116, 16, 192, 0, 0, 0, 0, 207, 210, 250, 64, 0, 127, 0, 0, 130, 0, 0, 127, 45, 58, 82, 41, 201, 116, 16, 64, 0, 0, 0, 0, 207, 210, 250, 64, 0, 127, 0, 0, 130, 0, 0, 127, 2, 51, 61, 41, 201, 116, 16, 64, 0, 0, 0, 0, 207, 210, 250, 64, 0, 126, 0, 0, 130, 0, 0, 127, 2, 51, 61, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 126, 0, 0, 130, 0, 0, 127, 233, 55, 1, 60, 125, 85, 130, 64, 0, 0, 0, 0, 124, 85, 226, 64, 0, 126, 0, 0, 130, 0, 0, 127, 45, 155, 77, 48 ),
+"array_index_data": PoolByteArray(  ),
+"blend_shape_data": [  ],
+"format": 97303,
+"index_count": 0,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 12
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "spawn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mesh:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.5, 0.5, 0.5 ), Vector3( 3, 3, 3 ) ]
+}
+
+[node name="SuperAttack" type="Area"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+shape = SubResource( 1 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 4.92706 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="SATimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/spawn = SubResource( 3 )
+[connection signal="area_entered" from="." to="." method="_on_Fire_area_entered"]
+[connection signal="timeout" from="SATimer" to="." method="_on_SATimer_timeout"]
