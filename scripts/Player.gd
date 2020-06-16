@@ -22,20 +22,24 @@ func _process(delta):
 		$UI/SuperAttackProgressBar/SuperAttackButton.visible = false
 	
 	translation.z -= speed * delta
-	#$ViewportContainer1/Viewport/Camera.translation.z = translation.z
 	$ViewportContainer/Viewport/Camera.global_transform = camera.global_transform
 
 
 func _input(event):
 	if OS.has_touchscreen_ui_hint():
 		var sb = $UI/SoundButton
+		var sab = $UI/SuperAttackProgressBar/SuperAttackButton
 		if (event is InputEventScreenTouch and event.is_pressed()) or \
 				event is InputEventScreenDrag:
-			if event.position.y > sb.rect_position.y and \
+			if !(event.position.y > sb.rect_position.y and \
 					event.position.y < sb.rect_position.y + sb.rect_size.y and \
-					event.position.x > sb.rect_position.x:
-				return
-			position = event.position
+					event.position.x > sb.rect_position.x) and \
+			   !(event.position.y > sab.get_global_rect().position.y and \
+					event.position.y < sab.get_global_rect().position.y + \
+					sab.get_global_rect().size.y and \
+					event.position.x > sab.get_global_rect().position.x and \
+					$Dragon.super_attack_fill == 100):
+				position = event.position
 
 
 func _physics_process(delta):

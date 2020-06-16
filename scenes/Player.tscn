@@ -159,6 +159,9 @@ custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 text = "SUPER ATTACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PauseButton" type="Button" parent="UI"]
 margin_left = 370.0
