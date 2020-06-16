@@ -3,6 +3,8 @@ extends Spatial
 var speed = 6.5
 var position = Vector2()
 
+onready var camera = $Camera
+
 
 func _process(delta):
 	$UI/PowerLabel.text = "Power: " + str($Dragon.power)
@@ -20,6 +22,8 @@ func _process(delta):
 		$UI/SuperAttackProgressBar/SuperAttackButton.visible = false
 	
 	translation.z -= speed * delta
+	#$ViewportContainer1/Viewport/Camera.translation.z = translation.z
+	$ViewportContainer/Viewport/Camera.global_transform = camera.global_transform
 
 
 func _input(event):
@@ -39,8 +43,8 @@ func _physics_process(delta):
 		position = get_viewport().get_mouse_position()
 	if !position:
 		return
-	var ray_origin = $Camera.project_ray_origin(position)
-	var ray_end = ray_origin + $Camera.project_ray_normal(position) * 100
+	var ray_origin = camera.project_ray_origin(position)
+	var ray_end = ray_origin + camera.project_ray_normal(position) * 100
 	var space_state = get_world().get_direct_space_state()
 	var intersection = space_state.intersect_ray(ray_origin, ray_end)
 	if not intersection.empty():
