@@ -52,6 +52,5 @@ func spawn_power_up():
 	if G.powerup_spawned or ("Guns" in get_parent().name):
 		return
 	var pi = powerup.instance()
-	get_parent().add_child(pi)
+	dragon.get_parent().get_parent().add_child(pi)
 	pi.global_transform.origin = global_transform.origin
-	pi.global_scale(Vector3(1,1,1))
