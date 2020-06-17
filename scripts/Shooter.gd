@@ -2,10 +2,11 @@ extends Enemy
 
 var missile 
 var agro = false
-export var force_noagro = false
 var distance = 70
 
 onready var rotate_object = self
+
+export var force_noagro = false
 
 
 func _ready():
@@ -27,8 +28,9 @@ func _on_AgroArea_area_entered(area):
 
 
 func start_fire():
-	shoot()
-	$AtkTimer.start()
+	if $AtkTimer.is_stopped():
+		shoot()
+		$AtkTimer.start()
 
 
 func shoot():
@@ -42,6 +44,8 @@ func shoot():
 		var mi = missile.instance()
 		get_parent().add_child(mi)
 		mi.global_transform = rotate_object.global_transform
+	else:
+		$AtkTimer.stop()
 
 
 func _on_AtkTimer_timeout():
@@ -51,6 +55,5 @@ func _on_AtkTimer_timeout():
 func _on_AgroArea_area_exited(area):
 	if area == dragon and get_parent().name != "Guns":
 		agro = false
-		$AtkTimer.stop()
 		if has_node("AnimationPlayer"):
 			$AnimationPlayer.play("idle")
