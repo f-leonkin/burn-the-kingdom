@@ -1634,6 +1634,7 @@ autoplay = "start"
 anims/start = SubResource( 46 )
 
 [node name="UI" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 432, 768 )
@@ -1725,9 +1726,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -150.0
+margin_left = -190.0
 margin_top = -284.0
-margin_right = 150.0
+margin_right = 190.0
 margin_bottom = 216.0
 color = Color( 0, 0, 0, 0.901961 )
 __meta__ = {
@@ -1735,7 +1736,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Help"]
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1744,7 +1745,7 @@ __meta__ = {
 }
 
 [node name="Buttons" type="HBoxContainer" parent="UI/Help/VBoxContainer"]
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 300, 40 )
 size_flags_horizontal = 3
@@ -1753,7 +1754,7 @@ __meta__ = {
 }
 
 [node name="Controls" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
-margin_right = 97.0
+margin_right = 124.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
@@ -1766,8 +1767,8 @@ custom_fonts/font = SubResource( 60 )
 text = "Controls"
 
 [node name="Enemies" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
-margin_left = 101.0
-margin_right = 198.0
+margin_left = 128.0
+margin_right = 252.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
@@ -1783,8 +1784,8 @@ __meta__ = {
 }
 
 [node name="Misc" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
-margin_left = 202.0
-margin_right = 300.0
+margin_left = 256.0
+margin_right = 380.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
@@ -1801,12 +1802,12 @@ __meta__ = {
 
 [node name="Text" type="Control" parent="UI/Help/VBoxContainer"]
 margin_top = 44.0
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 44.0
 
 [node name="Controls" type="Label" parent="UI/Help/VBoxContainer/Text"]
 visible = false
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1831,7 +1832,7 @@ __meta__ = {
 
 [node name="Enemies" type="RichTextLabel" parent="UI/Help/VBoxContainer/Text"]
 visible = false
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1844,14 +1845,14 @@ himself. If the dragon
 is nearby, a knight will
 attack with a sword.
 [color=green]ARCHER[/color] fires arrows.
-[color=blue]WIZARD[/color] casts magic
-missiles.
-[color=purple]WITCH[/color] casts missiles
-less often than a wizard,
+[color=blue]WIZARD[/color] casts magic missiles.
+[color=purple]WITCH[/color] casts missiles less
+often than a wizard,
 but missiles fly faster.
 [color=#8B4513]VILLAGER[/color] runs back and
 forth and doesn't attack.
-[color=#C19A6B]WEAPONS[/color] have 3 HP.[/center]"
+[color=#C19A6B]WEAPONS[/color] (catapults
+and scorpios) have 3 HP.[/center]"
 text = "
 KNIGHT runs if he sees
 the dragon in front of
@@ -1859,55 +1860,58 @@ himself. If the dragon
 is nearby, a knight will
 attack with a sword.
 ARCHER fires arrows.
-WIZARD casts magic
-missiles.
-WITCH casts missiles
-less often than a wizard,
+WIZARD casts magic missiles.
+WITCH casts missiles less
+often than a wizard,
 but missiles fly faster.
 VILLAGER runs back and
 forth and doesn't attack.
-WEAPONS have 3 HP."
+WEAPONS (catapults
+and scorpios) have 3 HP."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Misc" type="RichTextLabel" parent="UI/Help/VBoxContainer/Text"]
 visible = false
-margin_right = 300.0
+margin_right = 380.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 61 )
 bbcode_enabled = true
-bbcode_text = "[center]All enemies can drop
-[color=#FF8000]POWER UP[/color]. At power
-level 2, the dragon fires
-3 fireballs. At power
-level 3, fireballs fly
-faster and further,
-also the dragon moves
-a little faster. The level
-will be lowered if you
-take 2 hits at level 3,
+bbcode_text = "[center]
+All enemies can drop [color=#FF8000]POWER UP[/color].
+At power level 2, the dragon
+fires 3 fireballs. At power
+level 3, fireballs fly faster
+and further, also the dragon
+moves and shoots a little faster.
+The level will be lowered
+if you take 2 hits at level 3,
 or 3 hits at level 2.
-Destroy [color=#C19A6B]WEAPONS[/color]
-to get [color=red]HP[/color].
+Destroy [color=#C19A6B]WEAPONS[/color] to get [color=red]HP[/color].
 You can get energy for
 [color=#6200d8]SUPER ATTACK[/color] by killing
-enemies and burning houses.[/center]"
-text = "All enemies can drop
-POWER UP. At power
-level 2, the dragon fires
-3 fireballs. At power
-level 3, fireballs fly
-faster and further,
-also the dragon moves
-a little faster. The level
-will be lowered if you
-take 2 hits at level 3,
+enemies and burning houses.
+The dragon is invulnerable
+when using super attack.[/center]"
+text = "
+All enemies can drop POWER UP.
+At power level 2, the dragon
+fires 3 fireballs. At power
+level 3, fireballs fly faster
+and further, also the dragon
+moves and shoots a little faster.
+The level will be lowered
+if you take 2 hits at level 3,
 or 3 hits at level 2.
-Destroy WEAPONS
-to get HP.
+Destroy WEAPONS to get HP.
 You can get energy for
 SUPER ATTACK by killing
-enemies and burning houses."
+enemies and burning houses.
+The dragon is invulnerable
+when using super attack."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1930,15 +1934,14 @@ margin_bottom = 320.0
 custom_fonts/font = SubResource( 61 )
 text = "Created by Fyodor Leonkin
 leonkin.itch.io
-Made for the \"I can't draw
-but want to make
-a game (again)\" jam.
+Version 1.1
 
 Music (CC0):
 \"Adventure of Flying Jack\"
-by Alexander Nakarada
-\"Adventure Time\" by Scribe
-\"Black Knight\" by Rafael Krux."
+by Alexander Nakarada.
+\"Adventure Time\" by Scribe.
+\"Black Knight\"
+by Rafael Krux."
 align = 1
 valign = 1
 __meta__ = {

@@ -81,4 +81,6 @@ func ending():
 	G.finished = true
 	$UI.visible = false
 	$Finale.visible = true
+	if OS.get_name() != "Android":
+		$Finale/ColorRect/Label.text += "\nPress ESC to exit"
 	
