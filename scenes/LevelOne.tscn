@@ -286,7 +286,6 @@ material/0 = null
 
 [node name="Trees" type="Spatial" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
 
 [node name="Tree" type="MeshInstance" parent="Trees"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, -4.5 )
@@ -1329,7 +1328,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 shape = SubResource( 39 )
 
 [node name="Enemies" type="Spatial" parent="."]
-visible = false
 
 [node name="Boss" parent="Enemies" instance=ExtResource( 12 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -960 )
@@ -1453,7 +1451,7 @@ transform = Transform( 0.996195, 0, 0.0871558, 0, 1, 0, -0.0871558, 0, 0.996195,
 transform = Transform( 0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, -17.4, 0, -597 )
 
 [node name="Knight5" parent="Enemies/Knights" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48194, 0, -144 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.482, 0, -142 )
 
 [node name="Knight4" parent="Enemies/Knights" instance=ExtResource( 15 )]
 transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -23.066, 0, -308 )

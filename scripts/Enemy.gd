@@ -12,7 +12,8 @@ signal dead
 
 
 func _process(delta):
-	if global_transform.origin.z - dragon.global_transform.origin.z > 150:
+	if global_transform.origin.z - dragon.global_transform.origin.z > 150 \
+			or abs(global_transform.origin.x) > 20:
 		queue_free()
 
 
