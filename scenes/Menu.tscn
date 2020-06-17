@@ -1276,23 +1276,23 @@ size = 24
 use_filter = true
 font_data = ExtResource( 13 )
 
-[sub_resource type="StyleBoxFlat" id=76]
+[sub_resource type="StyleBoxFlat" id=58]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_color = Color( 0.729412, 0, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=77]
+[sub_resource type="StyleBoxFlat" id=59]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_bottom = 3
 border_color = Color( 0.517647, 0.0509804, 0.0509804, 1 )
 
-[sub_resource type="DynamicFont" id=64]
+[sub_resource type="DynamicFont" id=60]
 size = 18
 use_filter = true
 extra_spacing_top = -3
 extra_spacing_char = -1
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=75]
+[sub_resource type="DynamicFont" id=61]
 size = 20
 use_filter = true
 extra_spacing_top = -4
@@ -1757,12 +1757,12 @@ margin_right = 97.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 76 )
-custom_styles/pressed = SubResource( 76 )
-custom_styles/focus = SubResource( 77 )
-custom_styles/disabled = SubResource( 76 )
-custom_styles/normal = SubResource( 76 )
-custom_fonts/font = SubResource( 64 )
+custom_styles/hover = SubResource( 58 )
+custom_styles/pressed = SubResource( 58 )
+custom_styles/focus = SubResource( 59 )
+custom_styles/disabled = SubResource( 58 )
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 60 )
 text = "Controls"
 
 [node name="Enemies" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
@@ -1771,12 +1771,12 @@ margin_right = 198.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 76 )
-custom_styles/pressed = SubResource( 76 )
-custom_styles/focus = SubResource( 77 )
-custom_styles/disabled = SubResource( 76 )
-custom_styles/normal = SubResource( 76 )
-custom_fonts/font = SubResource( 64 )
+custom_styles/hover = SubResource( 58 )
+custom_styles/pressed = SubResource( 58 )
+custom_styles/focus = SubResource( 59 )
+custom_styles/disabled = SubResource( 58 )
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 60 )
 text = "Enemies"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1788,12 +1788,12 @@ margin_right = 300.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 76 )
-custom_styles/pressed = SubResource( 76 )
-custom_styles/focus = SubResource( 77 )
-custom_styles/disabled = SubResource( 76 )
-custom_styles/normal = SubResource( 76 )
-custom_fonts/font = SubResource( 64 )
+custom_styles/hover = SubResource( 58 )
+custom_styles/pressed = SubResource( 58 )
+custom_styles/focus = SubResource( 59 )
+custom_styles/disabled = SubResource( 58 )
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 60 )
 text = "Misc"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1810,7 +1810,7 @@ margin_right = 300.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 61 )
 text = "Use mouse to control
 the dragon.
 
@@ -1835,7 +1835,7 @@ margin_right = 300.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/normal_font = SubResource( 75 )
+custom_fonts/normal_font = SubResource( 61 )
 bbcode_enabled = true
 bbcode_text = "
 [center][color=grey]KNIGHT[/color] runs if he sees
@@ -1874,7 +1874,7 @@ margin_right = 300.0
 margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/normal_font = SubResource( 75 )
+custom_fonts/normal_font = SubResource( 61 )
 bbcode_enabled = true
 bbcode_text = "[center]All enemies can drop
 [color=#FF8000]POWER UP[/color]. At power
@@ -1927,7 +1927,7 @@ color = Color( 0, 0, 0, 0.901961 )
 [node name="Label" type="Label" parent="UI/About"]
 margin_right = 320.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 61 )
 text = "Created by Fyodor Leonkin
 leonkin.itch.io
 Made for the \"I can't draw
