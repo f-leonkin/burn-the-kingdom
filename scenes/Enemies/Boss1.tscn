@@ -304,7 +304,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -15, 0, 9 )
 anims/move = SubResource( 10 )
 
 [node name="SpawnR1" type="Spatial" parent="EnemySpawn"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7, 0, 14 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15, 0, 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EnemySpawn/SpawnR1"]
 anims/move = SubResource( 11 )
