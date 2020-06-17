@@ -1951,13 +1951,6 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 volume_db = -8.0
-[connection signal="timeout" from="Floor/Humans/Villager/Timer" to="Floor/Humans/Villager" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Floor/Humans/Wizard/AtkTimer" to="Floor/Humans/Wizard" method="_on_AtkTimer_timeout"]
-[connection signal="timeout" from="Floor/Humans/Witch/AtkTimer" to="Floor/Humans/Witch" method="_on_AtkTimer_timeout"]
-[connection signal="timeout" from="Floor/Humans/Archer/AtkTimer" to="Floor/Humans/Archer" method="_on_AtkTimer_timeout"]
-[connection signal="animation_finished" from="Floor/Humans/Knight/AnimationPlayer" to="Floor/Humans/Knight" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="area_entered" from="Floor/Humans/Knight/AtkArea" to="Floor/Humans/Knight" method="_on_AtkArea_area_entered"]
-[connection signal="timeout" from="Floor/Humans/Knight/AtkTimer" to="Floor/Humans/Knight" method="_on_AtkTimer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_started"]
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
