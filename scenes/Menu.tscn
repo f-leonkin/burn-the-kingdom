@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://assets/glb/Humans/Villager.material" type="Material" id=1]
 [ext_resource path="res://assets/menu-bg.png" type="Texture" id=2]
@@ -1276,18 +1276,26 @@ size = 24
 use_filter = true
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=58]
+[sub_resource type="StyleBoxFlat" id=76]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_color = Color( 0.729412, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=77]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 3
+border_color = Color( 0.517647, 0.0509804, 0.0509804, 1 )
+
+[sub_resource type="DynamicFont" id=64]
 size = 18
 use_filter = true
 extra_spacing_top = -3
 extra_spacing_char = -1
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=59]
-size = 17
+[sub_resource type="DynamicFont" id=75]
+size = 20
 use_filter = true
-extra_spacing_top = -3
-extra_spacing_char = -1
+extra_spacing_top = -4
 font_data = ExtResource( 13 )
 
 [node name="MenuScene" type="Spatial"]
@@ -1626,7 +1634,6 @@ autoplay = "start"
 anims/start = SubResource( 46 )
 
 [node name="UI" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 432, 768 )
@@ -1719,32 +1726,191 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -150.0
-margin_top = -60.0
+margin_top = -284.0
 margin_right = 150.0
-margin_bottom = 240.0
-color = Color( 0, 0, 0, 0.862745 )
+margin_bottom = 216.0
+color = Color( 0, 0, 0, 0.901961 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="UI/Help"]
-margin_top = -2.0
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Help"]
 margin_right = 300.0
-margin_bottom = 300.0
-custom_fonts/font = SubResource( 58 )
-text = "ROAR!
-Control the Dragon using mouse.
-Kill enemies and burn houses
-to get energy for super attack,
-then press SPACEBAR to use it!
-Enemies can drop power up.
-Max power lvl is 3, and it
-decreases if you get damage.
-Destroy weapons to regain HP.
-Press M to toggle sound.
-Press F to toggle fullscreen."
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="HBoxContainer" parent="UI/Help/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 300, 40 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
+margin_right = 97.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 76 )
+custom_styles/focus = SubResource( 77 )
+custom_styles/disabled = SubResource( 76 )
+custom_styles/normal = SubResource( 76 )
+custom_fonts/font = SubResource( 64 )
+text = "Controls"
+
+[node name="Enemies" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
+margin_left = 101.0
+margin_right = 198.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 76 )
+custom_styles/focus = SubResource( 77 )
+custom_styles/disabled = SubResource( 76 )
+custom_styles/normal = SubResource( 76 )
+custom_fonts/font = SubResource( 64 )
+text = "Enemies"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Misc" type="Button" parent="UI/Help/VBoxContainer/Buttons"]
+margin_left = 202.0
+margin_right = 300.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 76 )
+custom_styles/focus = SubResource( 77 )
+custom_styles/disabled = SubResource( 76 )
+custom_styles/normal = SubResource( 76 )
+custom_fonts/font = SubResource( 64 )
+text = "Misc"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Control" parent="UI/Help/VBoxContainer"]
+margin_top = 44.0
+margin_right = 300.0
+margin_bottom = 44.0
+
+[node name="Controls" type="Label" parent="UI/Help/VBoxContainer/Text"]
+visible = false
+margin_right = 300.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 75 )
+text = "Use mouse to control
+the dragon.
+
+ESC to pause.
+M to mute sounds.
+
+SPACEBAR or A or S
+to use super attack
+when the energy bar is full.
+
+F or F11 to
+toggle fullscreen."
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="RichTextLabel" parent="UI/Help/VBoxContainer/Text"]
+visible = false
+margin_right = 300.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 75 )
+bbcode_enabled = true
+bbcode_text = "
+[center][color=grey]KNIGHT[/color] runs if he sees
+the dragon in front of
+himself. If the dragon
+is nearby, a knight will
+attack with a sword.
+[color=green]ARCHER[/color] fires arrows.
+[color=blue]WIZARD[/color] casts magic
+missiles.
+[color=purple]WITCH[/color] casts missiles
+less often than a wizard,
+but missiles fly faster.
+[color=#8B4513]VILLAGER[/color] runs back and
+forth and doesn't attack.
+[color=#C19A6B]WEAPONS[/color] have 3 HP.[/center]"
+text = "
+KNIGHT runs if he sees
+the dragon in front of
+himself. If the dragon
+is nearby, a knight will
+attack with a sword.
+ARCHER fires arrows.
+WIZARD casts magic
+missiles.
+WITCH casts missiles
+less often than a wizard,
+but missiles fly faster.
+VILLAGER runs back and
+forth and doesn't attack.
+WEAPONS have 3 HP."
+
+[node name="Misc" type="RichTextLabel" parent="UI/Help/VBoxContainer/Text"]
+visible = false
+margin_right = 300.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 75 )
+bbcode_enabled = true
+bbcode_text = "[center]All enemies can drop
+[color=#FF8000]POWER UP[/color]. At power
+level 2, the dragon fires
+3 fireballs. At power
+level 3, fireballs fly
+faster and further,
+also the dragon moves
+a little faster. The level
+will be lowered if you
+take 2 hits at level 3,
+or 3 hits at level 2.
+Destroy [color=#C19A6B]WEAPONS[/color]
+to get [color=red]HP[/color].
+You can get energy for
+[color=#6200d8]SUPER ATTACK[/color] by killing
+enemies and burning houses.[/center]"
+text = "All enemies can drop
+POWER UP. At power
+level 2, the dragon fires
+3 fireballs. At power
+level 3, fireballs fly
+faster and further,
+also the dragon moves
+a little faster. The level
+will be lowered if you
+take 2 hits at level 3,
+or 3 hits at level 2.
+Destroy WEAPONS
+to get HP.
+You can get energy for
+SUPER ATTACK by killing
+enemies and burning houses."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="About" type="ColorRect" parent="UI"]
 visible = false
@@ -1752,17 +1918,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -150.0
-margin_top = -60.0
-margin_right = 150.0
-margin_bottom = 240.0
-color = Color( 0, 0, 0, 0.862745 )
+margin_left = -160.0
+margin_top = -77.0
+margin_right = 160.0
+margin_bottom = 243.0
+color = Color( 0, 0, 0, 0.901961 )
 
 [node name="Label" type="Label" parent="UI/About"]
-margin_top = -6.0
-margin_right = 300.0
-margin_bottom = 300.0
-custom_fonts/font = SubResource( 59 )
+margin_right = 320.0
+margin_bottom = 320.0
+custom_fonts/font = SubResource( 75 )
 text = "Created by Fyodor Leonkin
 leonkin.itch.io
 Made for the \"I can't draw
@@ -1798,3 +1963,6 @@ volume_db = -8.0
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/HelpButton" to="." method="_on_HelpButton_pressed"]
 [connection signal="pressed" from="UI/AboutButton" to="." method="_on_AboutButton_pressed"]
+[connection signal="pressed" from="UI/Help/VBoxContainer/Buttons/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="UI/Help/VBoxContainer/Buttons/Enemies" to="." method="_on_Enemies_pressed"]
+[connection signal="pressed" from="UI/Help/VBoxContainer/Buttons/Misc" to="." method="_on_Misc_pressed"]
