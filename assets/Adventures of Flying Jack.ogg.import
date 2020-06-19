@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Adventures of Flying Jack.ogg-26a62cf5bdf116a59159ee658e6a4000.oggstr"
+
+[deps]
+
+source_file="res://assets/Adventures of Flying Jack.ogg"
+dest_files=[ "res://.import/Adventures of Flying Jack.ogg-26a62cf5bdf116a59159ee658e6a4000.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

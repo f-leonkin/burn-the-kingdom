@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/font/PermanentMarker-Regular.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://scenes/Loading.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=15]
-[ext_resource path="res://assets/Adventures of Flying Jack.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/Adventures of Flying Jack.ogg" type="AudioStream" id=16]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 1, 1, 1, 1 )
