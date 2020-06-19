@@ -6,4 +6,5 @@ func _ready():
 
 
 func light():
+	$AnimationPlayer.stop(true)
 	$AnimationPlayer.play("light")
