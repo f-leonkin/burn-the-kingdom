@@ -7,7 +7,11 @@ onready var camera = $Camera
 
 
 func _process(delta):
-	$UI/PowerLabel.text = "Power: " + str($Dragon.power)
+	if $Dragon.power == 3:
+		$UI/PowerLabel.bbcode_text = "[color=yellow]"
+	else:
+		$UI/PowerLabel.bbcode_text = "[color=white]"
+	$UI/PowerLabel.bbcode_text += "Power: " + str($Dragon.power) + "[/color]"
 	$UI/HPLabel.text = "HP: " + str($Dragon.hp)
 	
 	var saf = $Dragon.super_attack_fill
