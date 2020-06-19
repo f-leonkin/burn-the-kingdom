@@ -13,7 +13,7 @@ func _on_PowerUp_area_entered(area):
 	if area == dragon:
 		if dragon.power < 3:
 			dragon.power += 1
-			dragon.apply_power()
+			dragon.change_power = true
 		G.powerup_spawned = false
 		queue_free()
 

@@ -6,6 +6,7 @@ const SPEED = 70
 var hp = MAX_HP
 var power = 1
 var power_dec_counter = 0
+var change_power = false
 var super_attack = false
 var super_attack_fill = 0
 var slope = 0 # -1 - left, 1 - right
@@ -84,6 +85,8 @@ func _on_ShootTimer_timeout():
 func shoot():
 	if !playable or super_attack:
 		return
+	if change_power:
+		apply_power()
 	$FireSound.play()
 	shoot_ap.play("shoot")
 	match power:
@@ -115,6 +118,7 @@ func apply_power():
 		speed_mult = 1.0
 		$ShootTimer.wait_time = 1.5
 	power_dec_counter = 6 / power
+	change_power = false
 	$ShootTimer.start()
 
 
@@ -132,7 +136,7 @@ func get_damage():
 		power_dec_counter -= 1
 		if power_dec_counter <= 0:
 			power -= 1
-			apply_power()
+			change_power = true
 
 
 func _on_Dragon_area_entered(area):
