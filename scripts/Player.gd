@@ -12,7 +12,9 @@ func _process(delta):
 	else:
 		$UI/PowerLabel.bbcode_text = "[color=white]"
 	$UI/PowerLabel.bbcode_text += "Power: " + str($Dragon.power) + "[/color]"
-	$UI/HPLabel.text = "HP: " + str($Dragon.hp)
+	
+	$UI/HPBar.value = $Dragon.hp
+	$UI/HPBar/HPLabel.text = str($Dragon.hp) + " HP"
 	
 	var saf = $Dragon.super_attack_fill
 	if saf == 0:

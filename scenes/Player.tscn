@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Dragon.tscn" type="PackedScene" id=2]
@@ -7,12 +7,14 @@
 [ext_resource path="res://scenes/Loading.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/pause-button.png" type="Texture" id=6]
 [ext_resource path="res://assets/sound-button.png" type="Texture" id=7]
+[ext_resource path="res://assets/hpbar-bg.png" type="Texture" id=8]
+[ext_resource path="res://assets/hpbar-fg.png" type="Texture" id=9]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 30, 1, 50 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 27
+size = 24
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
@@ -106,22 +108,42 @@ __meta__ = {
 
 [node name="PowerLabel" type="RichTextLabel" parent="UI"]
 margin_left = 10.0
+margin_top = 45.0
 margin_right = 210.0
-margin_bottom = 50.0
+margin_bottom = 95.0
 rect_min_size = Vector2( 200, 50 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[color=white]Power: [/color]"
 text = "Power: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HPLabel" type="Label" parent="UI"]
+[node name="HPBar" type="TextureProgress" parent="UI"]
 margin_left = 10.0
-margin_top = 40.0
-margin_right = 210.0
-margin_bottom = 90.0
-rect_min_size = Vector2( 200, 50 )
+margin_top = 10.0
+margin_right = 340.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.6, 0.6 )
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPLabel" type="Label" parent="UI/HPBar"]
+margin_top = -5.0
+margin_right = 185.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 165, 30 )
+rect_scale = Vector2( 1.8, 1.8 )
 custom_fonts/font = SubResource( 2 )
-text = "HP: "
+text = "HP"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
