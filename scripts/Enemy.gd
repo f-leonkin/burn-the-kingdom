@@ -2,6 +2,7 @@ extends Area
 class_name Enemy
 
 var powerup = load("res://scenes/PowerUp.tscn")
+var burn = load("res://scenes/Enemies/EnemyBurn.tscn")
 
 onready var dragon = G.dragon
 
@@ -46,6 +47,10 @@ func get_damage():
 
 
 func death():
+	if !("Boss" in name):
+		var bi = burn.instance()
+		dragon.get_parent().get_parent().add_child(bi)
+		bi.global_transform.origin = global_transform.origin
 	queue_free()
 
 
