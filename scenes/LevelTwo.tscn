@@ -1042,55 +1042,48 @@ transform = Transform( -0.991897, 0, -0.127047, 0, 1, 0, 0.127047, 0, -0.991897,
 transform = Transform( -0.991897, 0, -0.127047, 0, 1, 0, 0.127047, 0, -0.991897, -16.7861, 0, -758.14 )
 
 [node name="Knights" type="Spatial" parent="Enemies"]
-visible = false
 
 [node name="Knight" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -362.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -377.6 )
 
 [node name="Knight2" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9, 0, -358.2 )
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 9.8, 0, -372.6 )
 
 [node name="Knight3" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 13.9, 0, -368.5 )
-
-[node name="Knight4" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, 0, -362.6 )
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 13.9, 0, -376.6 )
 
 [node name="Knight7" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -633.075 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -641.205 )
 
 [node name="Knight8" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28427, 0, -728.798 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4924, 0, -734.767 )
 
 [node name="Knight9" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28427, 0, -882.395 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28427, 0, -884.395 )
 
 [node name="Knight10" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.50186, 0, -882.395 )
+transform = Transform( 0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, -8.50186, 0, -879.495 )
 
 [node name="Knight11" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9437, 0, -882.395 )
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 10.9437, 0, -882.395 )
 
 [node name="Knight12" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6424, 0.323486, -882.629 )
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -13.6424, 0.323486, -882.629 )
 
 [node name="Knight13" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94058, 0, -887.056 )
+transform = Transform( 0.996195, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996195, 4.94058, 0, -887.056 )
 
 [node name="Knight14" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94139, 0, -873.997 )
+transform = Transform( 0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, -3.94139, 0, -875.497 )
 
 [node name="Knight15" parent="Enemies/Knights" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94139, 0, -886.21 )
 
 [node name="Knight16" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71672, 0, -877.889 )
-
-[node name="Knight5" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, -17.7, 0, -362.6 )
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 6.71672, 0, -877.889 )
 
 [node name="Knight6" parent="Enemies/Knights" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4, 0, -371 )
+transform = Transform( 0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, -14.4, 0, -381 )
 
 [node name="Wizards" type="Spatial" parent="Enemies"]
 
@@ -1186,7 +1179,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62249, 0, -595.45 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.062, 0, -616.854 )
 
 [node name="Catapult10" parent="Enemies/Catapults" instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.17699, 0, -633.554 )
+transform = Transform( 0.999999, -0.00151844, 0, 0.00151844, 0.999999, 0, 0, 0, 1, 5.17699, 0, -633.554 )
 
 [node name="Catapult11" parent="Enemies/Catapults" instance=ExtResource( 16 )]
 transform = Transform( 0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, 0.819152, 13.431, 0, -725.549 )
