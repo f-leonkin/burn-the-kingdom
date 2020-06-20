@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/glb/Evil Dragon/dragon.material" type="Material" id=1]
 [ext_resource path="res://assets/glb/Humans/Crown.material" type="Material" id=2]
+[ext_resource path="res://assets/sounds/spell_fire_07-modified.ogg" type="AudioStream" id=3]
 [ext_resource path="res://assets/glb/Humans/King.material" type="Material" id=4]
 [ext_resource path="res://scripts/EvilDragon.gd" type="Script" id=5]
 [ext_resource path="res://scenes/Flame.tscn" type="PackedScene" id=6]
@@ -76,7 +77,7 @@ bind/16/name = "tail_4"
 bind/16/bone = -1
 bind/16/pose = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -5.7, 0 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "roll-left"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Armature/Skeleton:mouth")
@@ -198,7 +199,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 0, 0, 3.18219e-08, -0.21644, -5.84605e-09, 0.976296, 1, 1, 1, 0.0666667, 1, 0, 0, 0, 3.18701e-08, -0.219132, -5.90355e-09, 0.975695, 1, 1, 1, 0.133333, 1, 0, 0, 0, 3.20036e-08, -0.226707, -6.06339e-09, 0.973963, 1, 1, 1, 0.2, 1, 0, 0, 0, 9.00307e-08, -0.238409, 7.89115e-09, 0.971165, 1, 1, 1, 0.866667, 1, 0, 0, 0, 3.40956e-08, -0.413052, -9.15575e-09, 0.910707, 1, 1, 1, 0.933333, 1, 0, 0, 0, 3.41202e-08, -0.420117, -9.24483e-09, 0.90747, 1, 1, 1, 1, 1, 0, 0, 0, 3.41278e-08, -0.422618, -9.27597e-09, 0.906308, 1, 1, 1 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "roll-right"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Armature/Skeleton:mouth")
@@ -320,7 +321,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 0, 0, 3.18219e-08, -0.21644, -5.84605e-09, 0.976296, 1, 1, 1, 0.0666667, 1, 0, 0, 0, 3.17734e-08, -0.213746, -5.78815e-09, 0.976889, 1, 1, 1, 0.133333, 1, 0, 0, 0, 3.16344e-08, -0.206148, -5.62288e-09, 0.978521, 1, 1, 1, 0.2, 1, 0, 0, 0, 8.98214e-08, -0.19436, 6.2123e-09, 0.98093, 1, 1, 1, 0.866667, 1, 0, 0, 0, 2.72744e-08, -0.0105289, -3.40384e-10, 0.999945, 1, 1, 1, 0.933333, 1, 0, 0, 0, 8.12376e-08, -0.00275839, 5.96698e-11, 0.999996, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "shoot001"
 length = 2.0
 tracks/0/type = "transform"
@@ -443,7 +444,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
 resource_name = "wings"
 length = 2.0
 loop = true
@@ -490,7 +491,7 @@ tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = PoolRealArray( 0, 1, 0, -1.19209e-07, 1.19209e-07, 2.98023e-08, 2.23517e-08, 4.47035e-08, 1, 1, 1, 1, 0.0666667, 1, 0, -1.19209e-07, 1.19209e-07, -0.00356693, -7.46116e-08, 2.95364e-08, 0.999994, 1, 1, 1, 0.133333, 1, 0, -1.19209e-07, 1.19209e-07, -0.0136229, 2.18422e-08, 3.75539e-08, 0.999907, 1, 1, 1, 0.2, 1, 0, -1.19209e-07, 1.19209e-07, -0.0292111, -1.0882e-09, 3.7237e-08, 0.999573, 1, 1, 1, 0.666667, 1, 0, -1.19209e-07, 1.19209e-07, -0.20889, -3.58658e-08, 6.09069e-08, 0.977939, 1, 1, 1, 0.8, 1, 0, -1.19209e-07, 1.19209e-07, -0.251665, -7.05222e-08, 4.75686e-09, 0.967814, 1, 1, 1, 0.866667, 1, 0, -1.19209e-07, 1.19209e-07, -0.266724, -6.98194e-08, -2.70532e-08, 0.963773, 1, 1, 1, 0.933333, 1, 0, -1.19209e-07, 1.19209e-07, -0.276403, -7.67991e-08, 2.44277e-08, 0.961042, 1, 1, 1, 1, 1, 0, -1.19209e-07, 1.19209e-07, -0.279829, -8.91067e-08, 1.28309e-08, 0.96005, 1, 1, 1, 1.06667, 1, 0, -1.19209e-07, 1.19209e-07, -0.276403, -7.67991e-08, 2.44277e-08, 0.961042, 1, 1, 1, 1.13333, 1, 0, -1.19209e-07, 1.19209e-07, -0.266724, -6.17376e-08, 8.34124e-08, 0.963773, 1, 1, 1, 1.2, 1, 0, -1.19209e-07, 1.19209e-07, -0.251665, -5.79757e-08, 1.57177e-08, 0.967814, 1, 1, 1, 1.66667, 1, 0, -1.19209e-07, 1.19209e-07, -0.0731111, 6.45014e-08, 1.39199e-07, 0.997324, 1, 1, 1, 1.8, 1, 0, -1.19209e-07, 1.19209e-07, -0.029211, -1.08819e-09, 3.7237e-08, 0.999573, 1, 1, 1, 1.86667, 1, 0, -1.19209e-07, 1.19209e-07, -0.0136227, 8.84852e-08, 6.8267e-08, 0.999907, 1, 1, 1, 1.93333, 1, 0, -1.19209e-07, 1.19209e-07, -0.00356688, -5.97372e-08, 3.70401e-08, 0.999994, 1, 1, 1, 2, 1, 0, -1.19209e-07, 1.19209e-07, 2.98023e-08, 2.23517e-08, 4.47035e-08, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "roll-left"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Armature/Skeleton:mouth")
@@ -612,7 +613,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 0, 0, 3.18219e-08, -0.21644, -5.84605e-09, 0.976296, 1, 1, 1, 0.0666667, 1, 0, 0, 0, 3.18701e-08, -0.219132, -5.90355e-09, 0.975695, 1, 1, 1, 0.133333, 1, 0, 0, 0, 3.20036e-08, -0.226707, -6.06339e-09, 0.973963, 1, 1, 1, 0.2, 1, 0, 0, 0, 9.00307e-08, -0.238409, 7.89115e-09, 0.971165, 1, 1, 1, 0.866667, 1, 0, 0, 0, 3.40956e-08, -0.413052, -9.15575e-09, 0.910707, 1, 1, 1, 0.933333, 1, 0, 0, 0, 3.41202e-08, -0.420117, -9.24483e-09, 0.90747, 1, 1, 1, 1, 1, 0, 0, 0, 3.41278e-08, -0.422618, -9.27597e-09, 0.906308, 1, 1, 1 )
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 resource_name = "roll-right"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Armature/Skeleton:mouth")
@@ -734,7 +735,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, 0, 0, 0, 3.18219e-08, -0.21644, -5.84605e-09, 0.976296, 1, 1, 1, 0.0666667, 1, 0, 0, 0, 3.17734e-08, -0.213746, -5.78815e-09, 0.976889, 1, 1, 1, 0.133333, 1, 0, 0, 0, 3.16344e-08, -0.206148, -5.62288e-09, 0.978521, 1, 1, 1, 0.2, 1, 0, 0, 0, 8.98214e-08, -0.19436, 6.2123e-09, 0.98093, 1, 1, 1, 0.866667, 1, 0, 0, 0, 2.72744e-08, -0.0105289, -3.40384e-10, 0.999945, 1, 1, 1, 0.933333, 1, 0, 0, 0, 8.12376e-08, -0.00275839, 5.96698e-11, 0.999996, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 resource_name = "shoot"
 length = 2.0
 tracks/0/type = "transform"
@@ -752,7 +753,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0666667, 1, 0, 0, 0, -0.00634512, -7.45073e-09, 0, 0.99998, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.0229236, 7.45254e-09, -1.38814e-17, 0.999737, 1, 1, 1, 0.4, 1, 0, 0, 0, -0.117045, 0, 0, 0.993127, 1, 1, 1, 0.466667, 1, 0, 0, 0, -0.128877, 0, 0, 0.991661, 1, 1, 1, 0.533333, 1, 0, 0, 0, -0.130337, 4.4791e-16, -5.17161e-08, 0.99147, 1, 1, 1, 0.6, 1, 0, 0, 0, -0.128877, 8.95648e-16, -5.17134e-08, 0.991661, 1, 1, 1, 0.666667, 1, 0, 0, 0, -0.126086, 6.71493e-16, -4.98308e-08, 0.992019, 1, 1, 1, 0.733333, 1, 0, 0, 0, -0.122097, 8.94874e-16, -5.17012e-08, 0.992518, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 resource_name = "wings"
 length = 2.0
 tracks/0/type = "transform"
@@ -798,7 +799,7 @@ tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = PoolRealArray( 0, 1, 0, -1.19209e-07, 1.19209e-07, 2.98023e-08, 2.23517e-08, 4.47035e-08, 1, 1, 1, 1, 0.0666667, 1, 0, -1.19209e-07, 1.19209e-07, -0.00356693, -7.46116e-08, 2.95364e-08, 0.999994, 1, 1, 1, 0.133333, 1, 0, -1.19209e-07, 1.19209e-07, -0.0136229, 2.18422e-08, 3.75539e-08, 0.999907, 1, 1, 1, 0.2, 1, 0, -1.19209e-07, 1.19209e-07, -0.0292111, -1.0882e-09, 3.7237e-08, 0.999573, 1, 1, 1, 0.666667, 1, 0, -1.19209e-07, 1.19209e-07, -0.20889, -3.58658e-08, 6.09069e-08, 0.977939, 1, 1, 1, 0.8, 1, 0, -1.19209e-07, 1.19209e-07, -0.251665, -7.05222e-08, 4.75686e-09, 0.967814, 1, 1, 1, 0.866667, 1, 0, -1.19209e-07, 1.19209e-07, -0.266724, -6.98194e-08, -2.70532e-08, 0.963773, 1, 1, 1, 0.933333, 1, 0, -1.19209e-07, 1.19209e-07, -0.276403, -7.67991e-08, 2.44277e-08, 0.961042, 1, 1, 1, 1, 1, 0, -1.19209e-07, 1.19209e-07, -0.279829, -8.91067e-08, 1.28309e-08, 0.96005, 1, 1, 1, 1.06667, 1, 0, -1.19209e-07, 1.19209e-07, -0.276403, -7.67991e-08, 2.44277e-08, 0.961042, 1, 1, 1, 1.13333, 1, 0, -1.19209e-07, 1.19209e-07, -0.266724, -6.17376e-08, 8.34124e-08, 0.963773, 1, 1, 1, 1.2, 1, 0, -1.19209e-07, 1.19209e-07, -0.251665, -5.79757e-08, 1.57177e-08, 0.967814, 1, 1, 1, 1.66667, 1, 0, -1.19209e-07, 1.19209e-07, -0.0731111, 6.45014e-08, 1.39199e-07, 0.997324, 1, 1, 1, 1.8, 1, 0, -1.19209e-07, 1.19209e-07, -0.029211, -1.08819e-09, 3.7237e-08, 0.999573, 1, 1, 1, 1.86667, 1, 0, -1.19209e-07, 1.19209e-07, -0.0136227, 8.84852e-08, 6.8267e-08, 0.999907, 1, 1, 1, 1.93333, 1, 0, -1.19209e-07, 1.19209e-07, -0.00356688, -5.97372e-08, 3.70401e-08, 0.999994, 1, 1, 1, 2, 1, 0, -1.19209e-07, 1.19209e-07, 2.98023e-08, 2.23517e-08, 4.47035e-08, 1, 1, 1, 1 )
 
-[sub_resource type="ArrayMesh" id=13]
+[sub_resource type="ArrayMesh" id=11]
 resource_name = "King"
 surfaces/0 = {
 "aabb": AABB( -10.459, 0.00099659, -0.96088, 4.91798, 4.56205, 1.47197 ),
@@ -825,7 +826,7 @@ surfaces/1 = {
 "vertex_count": 144
 }
 
-[sub_resource type="Skin" id=14]
+[sub_resource type="Skin" id=12]
 resource_name = "Skin"
 bind_count = 6
 bind/0/name = "main"
@@ -847,7 +848,7 @@ bind/5/name = "leg_r"
 bind/5/bone = -1
 bind/5/pose = Transform( 4.37114e-08, 0, -1, 0, -1, 0, -1, 0, -4.37114e-08, 3.63801e-07, 1.281, -8.32279 )
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 resource_name = "king-dragon"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Skeleton:head")
@@ -991,16 +992,16 @@ material/0 = null
 
 [node name="WingsAnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "wings"
-anims/roll-left = SubResource( 5 )
-anims/roll-right = SubResource( 6 )
-anims/shoot001 = SubResource( 7 )
-anims/wings = SubResource( 8 )
+anims/roll-left = SubResource( 3 )
+anims/roll-right = SubResource( 4 )
+anims/shoot001 = SubResource( 5 )
+anims/wings = SubResource( 6 )
 
 [node name="ShootAnimationPlayer" type="AnimationPlayer" parent="."]
-anims/roll-left = SubResource( 9 )
-anims/roll-right = SubResource( 10 )
-anims/shoot = SubResource( 11 )
-anims/wings = SubResource( 12 )
+anims/roll-left = SubResource( 7 )
+anims/roll-right = SubResource( 8 )
+anims/shoot = SubResource( 9 )
+anims/wings = SubResource( 10 )
 
 [node name="King" type="Spatial" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.498097, -0.0435779, 0, 0.0435779, 0.498097, 0, 0.7, -1.1 )
@@ -1038,14 +1039,14 @@ bones/5/enabled = true
 bones/5/bound_children = [  ]
 
 [node name="King" type="MeshInstance" parent="King/Skeleton"]
-mesh = SubResource( 13 )
-skin = SubResource( 14 )
+mesh = SubResource( 11 )
+skin = SubResource( 12 )
 material/0 = null
 material/1 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="King"]
 autoplay = "king-dragon"
-anims/king-dragon = SubResource( 15 )
+anims/king-dragon = SubResource( 13 )
 
 [node name="BossFlames" type="Spatial" parent="."]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0 )
@@ -1068,3 +1069,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 3.06089, -0.376611 )
 
 [node name="Flame4" parent="BossFlames" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 3.1, -0.5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 8.0

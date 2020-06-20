@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=1]
 [ext_resource path="res://assets/glb/Scorpio2.material" type="Material" id=2]
 [ext_resource path="res://assets/glb/Scorpio1.material" type="Material" id=3]
 [ext_resource path="res://scenes/DamageLight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sounds/swish-7.ogg" type="AudioStream" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.24, 1, 2.125 )
@@ -87,6 +88,10 @@ material/1 = null
 
 [node name="DamageLight" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -7.0
 [connection signal="area_entered" from="AgroArea" to="." method="_on_AgroArea_area_entered"]
 [connection signal="area_exited" from="AgroArea" to="." method="_on_AgroArea_area_exited"]
 [connection signal="timeout" from="AtkTimer" to="." method="_on_AtkTimer_timeout"]

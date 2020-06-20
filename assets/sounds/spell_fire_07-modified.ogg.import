@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spell_fire_07-modified.ogg-6b48e028e8d91f06dcf776b6c5e3f97b.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/spell_fire_07-modified.ogg"
+dest_files=[ "res://.import/spell_fire_07-modified.ogg-6b48e028e8d91f06dcf776b6c5e3f97b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -10,6 +10,7 @@ func _ready():
 
 func _on_ShootTimer_timeout():
 	$ShootAnimationPlayer.play("shoot")
+	$AudioStreamPlayer.play()
 
 
 func _on_Boss_dead():

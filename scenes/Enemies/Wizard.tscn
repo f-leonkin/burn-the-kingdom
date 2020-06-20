@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/glb/Humans/Wizard.material" type="Material" id=1]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/spell_02-modified.ogg" type="AudioStream" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.5, 2.5, 1 )
@@ -291,6 +292,10 @@ shape = SubResource( 8 )
 
 [node name="AtkTimer" type="Timer" parent="."]
 wait_time = 1.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
 [connection signal="area_entered" from="AgroArea" to="." method="_on_AgroArea_area_entered"]
 [connection signal="area_exited" from="AgroArea" to="." method="_on_AgroArea_area_exited"]
 [connection signal="timeout" from="AtkTimer" to="." method="_on_AtkTimer_timeout"]

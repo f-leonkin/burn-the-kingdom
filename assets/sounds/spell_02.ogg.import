@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spell_02.ogg-0f9bf7c09a26d4027b2bcf83376c6729.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/spell_02.ogg"
+dest_files=[ "res://.import/spell_02.ogg-0f9bf7c09a26d4027b2bcf83376c6729.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -40,7 +40,8 @@ func shoot():
 				Vector3.UP)
 		if has_node("AnimationPlayer"):
 			$AnimationPlayer.play("attack")
-	
+		if has_node("AudioStreamPlayer"):
+			$AudioStreamPlayer.play()
 		var mi = missile.instance()
 		get_parent().add_child(mi)
 		mi.global_transform = rotate_object.global_transform

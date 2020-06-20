@@ -1267,5 +1267,5 @@ stream = ExtResource( 4 )
 volume_db = -3.0
 autoplay = true
 [connection signal="animation_finished" from="Control/AnimationPlayer" to="Player" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="dead" from="Enemies/Boss" to="Enemies/BossEnemySpawns/BossEnemySpawn" method="_on_Boss_dead"]
 [connection signal="dead" from="Enemies/Boss" to="Enemies/BossEnemySpawns/BossEnemySpawn2" method="_on_Boss_dead"]
+[connection signal="dead" from="Enemies/Boss" to="Enemies/BossEnemySpawns/BossEnemySpawn" method="_on_Boss_dead"]

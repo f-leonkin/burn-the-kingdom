@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://assets/spell_fire_07.ogg" type="AudioStream" id=1]
-[ext_resource path="res://assets/spell_fire_05-modified.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/sounds/spell_fire_07.ogg" type="AudioStream" id=1]
+[ext_resource path="res://assets/sounds/spell_fire_05-modified.ogg" type="AudioStream" id=2]
 [ext_resource path="res://assets/glb/Dragon/dragon.material" type="Material" id=3]
 [ext_resource path="res://scripts/Dragon.gd" type="Script" id=4]
 

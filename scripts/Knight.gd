@@ -31,6 +31,7 @@ func _on_AtkArea_area_entered(area):
 func _on_AtkTimer_timeout():
 	for a in $AtkArea.get_overlapping_areas():
 		if a == dragon:
+			$AudioStreamPlayer.play()
 			dragon.get_damage()
 
 

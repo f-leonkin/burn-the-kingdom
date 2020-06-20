@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/glb/Catapult1.material" type="Material" id=1]
 [ext_resource path="res://assets/glb/Rock.material" type="Material" id=2]
 [ext_resource path="res://scripts/Catapult.gd" type="Script" id=3]
 [ext_resource path="res://scenes/DamageLight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sounds/bfh1_wood_breaking_04-modified.ogg" type="AudioStream" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Catapult0"
@@ -122,5 +123,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 20 )
 shape = SubResource( 6 )
 
 [node name="DamageLight" parent="." instance=ExtResource( 4 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 5.0
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="AgroArea" to="." method="_on_AgroArea_area_entered"]
