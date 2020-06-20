@@ -661,7 +661,7 @@ mesh = SubResource( 15 )
 material/0 = null
 
 [node name="Tower22" type="MeshInstance" parent="Buildings"]
-transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 4, 0, -229.425 )
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 4, 0, -228.55 )
 mesh = SubResource( 15 )
 material/0 = null
 
@@ -673,7 +673,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 shape = SubResource( 17 )
 
 [node name="Tower23" type="MeshInstance" parent="Buildings"]
-transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -4, 0, -229.425 )
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -4, 0, -228.55 )
 mesh = SubResource( 15 )
 material/0 = null
 
@@ -1243,12 +1243,13 @@ transform = Transform( 0.422618, 0, -0.906308, 0, 1, 0, 0.906308, 0, 0.422618, 8
 transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, -13.0419, -1.90735e-06, -787.226 )
 
 [node name="BossEnemySpawns" type="Spatial" parent="Enemies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6, 13, -917.3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, -913.8 )
 
 [node name="BossEnemySpawn" parent="Enemies/BossEnemySpawns" instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -0.799988 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -0.8 )
 
 [node name="BossEnemySpawn2" parent="Enemies/BossEnemySpawns" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
 
 [node name="Boss" parent="Enemies" instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -947 )
