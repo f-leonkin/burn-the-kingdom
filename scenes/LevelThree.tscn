@@ -286,7 +286,7 @@ __meta__ = {
 [node name="StartLabel" type="Label" parent="Control"]
 margin_left = -250.0
 margin_top = 334.0
-margin_right = -27.999
+margin_right = -27.9986
 margin_bottom = 434.0
 rect_min_size = Vector2( 200, 100 )
 custom_fonts/font = SubResource( 3 )
