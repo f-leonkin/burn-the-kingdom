@@ -21,8 +21,9 @@
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/Enemies/Witch.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/Enemies/Villager.tscn" type="PackedScene" id=21]
-[ext_resource path="res://scenes/Enemies/Boss2.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/Boss2EnemySpawn.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/Enemies/Boss3.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/Boss3EnemySpawn.tscn" type="PackedScene" id=23]
+
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 1, 1, 1, 1 )
@@ -57,17 +58,17 @@ tracks/0/keys = {
 "values": [ Vector2( -250, 334 ), Vector2( 116, 334 ), Vector2( 116, 334 ), Vector2( 440, 334 ) ]
 }
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=5]
 shader = ExtResource( 8 )
 
 [sub_resource type="PlaneMesh" id=6]
-material = SubResource( 8 )
+material = SubResource( 5 )
 size = Vector2( 70, 300 )
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.141176, 0.556863, 0.0941176, 1 )
 
-[sub_resource type="PlaneMesh" id=22]
+[sub_resource type="PlaneMesh" id=8]
 material = SubResource( 7 )
 size = Vector2( 70, 700 )
 
@@ -312,7 +313,7 @@ script = ExtResource( 1 )
 
 [node name="Earth" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -650 )
-mesh = SubResource( 22 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="Trees" type="Spatial" parent="."]
