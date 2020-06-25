@@ -77,4 +77,5 @@ func death():
 
 
 func _on_DeathTimer_timeout():
+	dragon.get_parent().get_parent().get_node("AudioStreamPlayer").stop()
 	dragon.get_parent().loading()

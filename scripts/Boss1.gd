@@ -23,6 +23,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 				c.vulnerable = true
 		$EnemySpawn.start()
 	elif anim_name == "death":
+		dragon.get_parent().get_parent().get_node("AudioStreamPlayer").stop()
 		dragon.get_parent().loading()
 
 
