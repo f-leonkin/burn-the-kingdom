@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/water-animated.tres" type="Shader" id=1]
 [ext_resource path="res://assets/font/PermanentMarker-Regular.ttf" type="DynamicFontData" id=2]
@@ -64,9 +64,6 @@ shader = ExtResource( 1 )
 [sub_resource type="PlaneMesh" id=7]
 material = SubResource( 17 )
 size = Vector2( 70, 300 )
-
-[sub_resource type="ShaderMaterial" id=8]
-shader = ExtResource( 1 )
 
 [sub_resource type="ArrayMesh" id=9]
 surfaces/0 = {
@@ -287,7 +284,7 @@ script = ExtResource( 23 )
 [node name="Water2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00350952, -0.0506592, -649.972 )
 mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+material/0 = null
 script = ExtResource( 23 )
 
 [node name="Trees" type="Spatial" parent="."]
