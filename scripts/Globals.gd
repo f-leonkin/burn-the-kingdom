@@ -19,3 +19,5 @@ func load_scene():
 			get_tree().change_scene("res://scenes/LevelOne.tscn")
 		2:
 			get_tree().change_scene("res://scenes/LevelTwo.tscn")
+		3:
+			get_tree().change_scene("res://scenes/LevelThree.tscn")

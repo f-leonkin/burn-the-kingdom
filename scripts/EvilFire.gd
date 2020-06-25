@@ -9,6 +9,8 @@ var speed_mult = 1.0
 func _ready():
 	if name == "SuperAttack":
 		$AnimationPlayer.play("spawn")
+	elif "Snake" in name:
+		speed_mult = -0.8
 
 
 func _process(delta):

@@ -10,7 +10,7 @@ Made for the ["I can't draw but want to make a game (again)" jam](https://itch.i
 
 Music and sounds are licensed under CC0:
 
-* ["Adventures of Flying Jack" by Alexander Nakarada](https://freepd.com/epic.php)
+* ["Adventures of Flying Jack" and "The Enemy" by Alexander Nakarada](https://freepd.com/epic.php)
 * ["Adventure Time" by Scribe](https://opengameart.org/content/adventure-time)
 * ["Black Knight" by Rafael Krux](https://freepd.com/epic.php)
 * Sounds by rubberduck ([1](https://opengameart.org/content/80-cc0-rpg-sfx), [2](https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx)), [artisticdude](https://opengameart.org/content/swishes-sound-pack) and [Kenney](https://www.kenney.nl/assets/rpg-audio)

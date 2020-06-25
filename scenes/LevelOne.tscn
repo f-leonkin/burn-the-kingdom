@@ -49,7 +49,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -220, 334 ), Vector2( 116, 334 ), Vector2( 116, 334 ), Vector2( 440, 334 ) ]
+"values": [ Vector2( -220, 334 ), Vector2( 115, 334 ), Vector2( 115, 334 ), Vector2( 440, 334 ) ]
 }
 
 [sub_resource type="SpatialMaterial" id=5]
