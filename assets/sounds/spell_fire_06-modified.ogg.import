@@ -11,5 +11,5 @@ dest_files=[ "res://.import/spell_fire_06-modified.ogg-d6f1cfa2a172e895c5d0d68b1
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

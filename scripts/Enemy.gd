@@ -22,8 +22,9 @@ func get_damage():
 	if !vulnerable:
 		return
 	hp -= 1
-	if hp > 0 and has_node("DamageLight"):
-		$DamageLight.light()
+	if hp > 0:
+		if has_node("DamageLight"):
+			$DamageLight.light()
 	else:
 		if !dragon.super_attack:
 			dragon.super_attack_fill += 10
