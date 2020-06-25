@@ -77,6 +77,7 @@ func death():
 	G.power = dragon.power
 	G.level = 3
 	$Snake/BossFlames.visible = true
+	$AtkTimer.stop()
 	$Snake/AnimationPlayer.stop()
 	$DeathTimer.start()
 
