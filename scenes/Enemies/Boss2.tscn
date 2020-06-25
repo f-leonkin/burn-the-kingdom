@@ -456,7 +456,7 @@ tracks/0/keys = {
 monitoring = false
 monitorable = false
 script = ExtResource( 2 )
-hp = 15
+hp = 20
 
 [node name="DummyCollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
