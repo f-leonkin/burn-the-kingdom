@@ -710,6 +710,11 @@ transform = Transform( 0.4746, 0, -0.880201, 0, 1, 0, 0.880201, 0, 0.4746, 3.173
 mesh = SubResource( 16 )
 material/0 = null
 
+[node name="Rock8" type="MeshInstance" parent="Buildings"]
+transform = Transform( 0.4746, 0, -0.880201, 0, 1, 0, 0.880201, 0, 0.4746, -2.74119, 0, -176.824 )
+mesh = SubResource( 16 )
+material/0 = null
+
 [node name="Rock7" type="MeshInstance" parent="Buildings"]
 transform = Transform( -0.474601, 0, -0.880201, 0, 1, 0, 0.880201, 0, -0.474601, 0.818802, 0, -163.278 )
 mesh = SubResource( 16 )
