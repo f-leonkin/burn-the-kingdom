@@ -8,6 +8,12 @@ var swim_dir = 0
 var fireball = load("res://scenes/SnakeFireball.tscn")
 
 
+func _ready():
+	if OS.get_name() == "Android":
+		var snake_material = $Snake/Skeleton/Mesh.mesh.surface_get_material(0)
+		snake_material.flags_unshaded = true
+
+
 func _process(delta):
 	if state == "swim":
 		$Snake.translation.x += swim_dir * SPEED * delta
@@ -54,7 +60,6 @@ func swim():
 	randomize()
 	var coord_x = 30 - 60 * round(randf())
 	var coord_z = 10 + randi() % 15
-	print(coord_z)
 	swim_dir = sign(-coord_x)
 	$Snake.translation = Vector3(coord_x, 0, coord_z)
 	$Snake.rotation_degrees.y = (90 * swim_dir)

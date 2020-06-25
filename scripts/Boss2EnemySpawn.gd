@@ -33,6 +33,8 @@ func spawn(s):
 	enemy.translation.y = 1.8
 	enemy.connect("dead", self, "sink", [s])
 	s.get_node("Boat").translation.y = 0
+	for c in s.get_node("Boat").get_children():
+		c._ready()
 	s.get_node("AnimationPlayer").play("move")
 
 
